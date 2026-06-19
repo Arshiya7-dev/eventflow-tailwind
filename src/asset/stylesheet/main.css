@@ -1,0 +1,402 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        overflow-x: hidden;
+        background-color: rgb(10, 14, 17);
+    }
+}
+
+@layer components {
+    .iconHeader {
+        @apply *:text-2xl *:md:grow *:transition-all *:duration-300 *:hover:text-pink-500 *:nth-[3]:px-2 *:nth-[3]:text-pink-500 *:nth-[3]:hover:text-white *:nth-[3]:md:text-white
+    }
+
+    .drop {
+        @apply w-3/2 bg-white opacity-0 invisible duration-700 absolute top-17 left-0 *:duration-700 *:hover:bg-pink-500 *:hover:**:text-white *:h-13 *:border-b *:border-b-[#0303033f] **:flex **:w-full **:justify-center **:items-center **:text-black
+    }
+
+    .sub-menu {
+        @apply w-50 absolute top-0 left-full flex-wrap bg-white duration-700 opacity-0 invisible *:w-full *:h-13 *:duration-700 *:hover:bg-pink-500 *:hover:**:text-white ! **:text-black ! **:flex **:justify-center **:items-center **:w-full
+    }
+
+    .Music-fastival {
+        @apply *:text-white *:flex *:px-3.5 *:nth-[1]:text-2xl *:nth-[2]:text-5xl *:nth-[2]:my-4 *:nth-[4]:mt-6 *:nth-[5]:mt-3 *:nth-[6]:mt-8 *:nth-[6]:mx-5 *:nth-[6]:w-fit *:nth-[6]:py-4 *:nth-[6]:px-14 *:nth-[6]:rounded-4xl
+    }
+
+    .anime-top {
+        animation: fromTop .8s linear forwards;
+    }
+
+    .anime-left {
+        animation: fromLeft .8s linear forwards;
+    }
+
+    .anime-bottom {
+        animation: fromBottom .8s linear forwards;
+    }
+
+    .anime-shape {
+        animation: shape 1s linear forwards;
+    }
+
+    .anime-main {
+        animation: main-slider 1.2s linear forwards;
+    }
+
+    .event-benefits {
+        @apply *:nth-[1]:text-3xl *:nth-[1]:border-amber-50 *:nth-[1]:p-5 *:nth-[1]:rounded-full *:nth-[2]:flex *:nth-[2]:w-fit *:nth-[2]:mt-12 *:nth-[2]:text-2xl *:nth-[2]:duration-500 *:nth-[2]:hover:text-pink-500 ! *:nth-[3]:mt-6 *:nth-[4]:flex *:nth-[4]:w-fit *:nth-[4]:mt-10 *:nth-[4]:font-bold *:nth-[4]:duration-500 *:nth-[4]:hover:text-pink-500 !
+    }
+
+    .ticker-track {
+        width: max-content;
+        animation: ticker 12s linear infinite;
+    }
+
+    .ticker {
+        &:hover {
+            >.ticker-track {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    .star {
+        width: 50px;
+        animation: starSpin 2s ease-in-out infinite;
+    }
+
+    .our-event {
+        @apply px-4 *:text-white *:font-MirandaSans *:capitalize *:nth-[1]:mt-10 *:nth-[1]:uppercase ! *:nth-[1]:text-xl *:nth-[2]:uppercase ! *:nth-[2]:text-3xl *:nth-[2]:font-bold *:nth-[2]:my-7 *:nth-[3]:py-4 *:nth-[3]:px-6 *:nth-[3]:rounded-4xl *:nth-[4]:block *:nth-[4]:mt-13 *:nth-[4]:w-fit *:nth-[4]:text-4xl *:nth-[4]:rounded-full *:nth-[4]:p-5 *:nth-[5]:block *:nth-[5]:w-fit *:nth-[5]:mt-10 *:nth-[5]:text-xl *:nth-[5]:font-bold *:nth-[6]:text-sm *:nth-[6]:mt-5 *:nth-[7]:block *:nth-[7]:mt-13 *:nth-[7]:w-fit *:nth-[7]:text-4xl *:nth-[7]:rounded-full *:nth-[7]:p-5 *:nth-[8]:block *:nth-[8]:w-fit *:nth-[8]:mt-10 *:nth-[8]:text-xl *:nth-[8]:font-bold *:nth-[9]:text-sm *:nth-[9]:mt-5 *:nth-[10]:my-15 *:nth-[10]:rounded-3xl
+        /*md-scope*/
+        *:nth-[4]:md:w-20 *:nth-[4]:md:align-top *:nth-[5]:md:ms-24 *:nth-[5]:md:mt-0 *:nth-[6]:md:ms-24 *:nth-[6]:md:mt-3 *:nth-[7]:md:w-20 *:nth-[7]:md:inline-block *:nth-[7]:md:align-top *:nth-[8]:md:ms-24 *:nth-[8]:md:mt-0 *:nth-[9]:md:ms-24 *:nth-[9]:md:mt-3
+        /*xl-scope*/
+        *:nth-[3]:xl:block *:nth-[3]:xl:mt-9 *:nth-[3]:xl:w-fit
+    }
+
+    .buy-ticket {
+        @apply px-10 *:nth-[2]:text-sm *:nth-[4]:text-sm *:nth-[5]:text-2xl *:nth-[5]:font-bold *:nth-[5]:mt-5 *:nth-[6]:text-[18px] *:nth-[6]:mt-4 *:nth-[7]:px-7 *:nth-[7]:py-3 *:nth-[7]:rounded-3xl *:nth-[7]:relative *:nth-[7]:top-13 *:nth-[8]:px-7 *:nth-[8]:py-3 *:nth-[8]:rounded-3xl *:nth-[8]:relative *:nth-[8]:top-13 *:nth-[8]:border *:nth-[8]:border-white
+        /*md-scope*/
+        *:nth-[5]:md:text-5xl *:nth-[7]:md:top-40 *:nth-[8]:md:left-5 *:nth-[8]:md:top-40
+        /*xl-scope*/
+        *:nth-[2]:xl:px-2.5 *:nth-[4]:xl:px-2.5 *:nth-[7]:xl:left-0 *:nth-[7]:xl:top-13 *:nth-[8]:xl:left-4 *:nth-[8]:xl:top-13
+    }
+
+    .animation-footer {
+        animation: imgFooter 1.5s linear infinite alternate;
+    }
+}
+
+@layer utilities {
+    .row {
+        @apply w-full flex flex-wrap
+    }
+
+    .brand-gradient {
+        background: linear-gradient(90deg,
+                #ca205f,
+                #5f19da,
+                #00c6ff,
+                #0072ff);
+
+        background-size: 300% 100%;
+        background-position: left;
+        transition: background-position 0.5s ease;
+    }
+
+    .brand-gradient:hover {
+        background-position: right;
+    }
+}
+
+/* footer/// */
+
+/* ===== Signature Frame (Personal Footer Card) ===== */
+
+.signature-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.signature-frame-wrap {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    flex-shrink: 0;
+}
+
+.signature-frame-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: linear-gradient(90deg, #ca205f, #5f19da);
+    padding: 4px;
+    transition: background 0.4s ease;
+}
+
+.signature-block:hover .signature-frame-border {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+.signature-frame-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgb(10, 14, 17);
+}
+
+.signature-frame-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.signature-frame-wrap {
+    transition: filter 0.35s ease;
+}
+
+.signature-frame-wrap:hover {
+    filter: drop-shadow(0 0 22px rgba(95, 25, 218, 0.45));
+}
+
+/* icons stacked vertically, sliding out to the right */
+.signature-icon-stack {
+    position: absolute;
+    top: 50%;
+    right: -64px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 10;
+}
+
+.signature-icon-item {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    opacity: 0;
+    transform: translateX(-40px) scale(0.7);
+    transition: opacity 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* staggered reveal on hover — each icon waits a bit longer */
+.signature-frame-wrap:hover .signature-icon-item:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition-delay: 0.05s;
+}
+
+.signature-frame-wrap:hover .signature-icon-item:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition-delay: 0.15s;
+}
+
+.signature-frame-wrap:hover .signature-icon-item:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition-delay: 0.25s;
+}
+
+/* glow rising from beneath each icon on hover, same brand gradient */
+.signature-icon-glow {
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 38px;
+    height: 38px;
+    transform: translateX(-50%) translateY(0) scale(0.6);
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #ca205f, #5f19da);
+    opacity: 0;
+    filter: blur(10px);
+    z-index: -1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.signature-icon-item:hover .signature-icon-glow {
+    opacity: 0.85;
+    transform: translateX(-50%) translateY(10px) scale(1.15);
+}
+
+.signature-icon-circle {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0e11;
+    font-size: 20px;
+    transition: transform 0.25s ease;
+    z-index: 1;
+}
+
+.signature-icon-item:hover .signature-icon-circle {
+    transform: translateY(-2px) scale(1.08);
+}
+
+/* ===== Name & title text, gradient that swaps on hover ===== */
+
+.signature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.signature-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    transition: background-image 0.4s ease;
+}
+
+.signature-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-image 0.4s ease;
+}
+
+.signature-block:hover .signature-name,
+.signature-block:hover .signature-title {
+    background-image: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+@theme {
+    --font-Vollkorn: "Vollkorn", serif;
+    --font-MirandaSans: "Miranda", sans-serif;
+    --animate-star: star 3s ease-in-out infinite
+}
+
+@font-face {
+    font-family: Vollkorn;
+    src: url(../font/Vollkorn-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: MirandaSans;
+    src: url(../font/MirandaSans-VariableFont_wght.ttf);
+}
+
+@keyframes star {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(.7) rotate(180deg);
+        opacity: .3;
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shape {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes main-slider {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+@keyframes starSpin {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(-180deg);
+    }
+
+    60% {
+        transform: rotate(-280deg);
+    }
+}
+
+@keyframes imgFooter {
+    from {
+        transform: translateY(-12px);
+    }
+
+    to {
+        transform: translateY(12px);
+    }
+}
+
+/* npx @tailwindcss/cli -i ./src/asset/stylesheet/main.css -o ./src/asset/stylesheet/output.css --watch */
